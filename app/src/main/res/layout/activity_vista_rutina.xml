@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#263238"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Rutina.VistaRutina">
+
+    <!-- Campo de texto para el nombre de la rutina -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la Rutina"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nombreRutinaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa el nombre de la rutina" />
+
+    <!-- Campo de texto para las notas del usuario -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notas"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/notasRutinaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa tus notas aquí"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLines="10"
+        android:scrollbars="vertical" />
+
+    <!-- Contenedor para los botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <!-- Botón para guardar notas -->
+        <Button
+            android:id="@+id/guardarNotasButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Guardar Notas"
+            android:textColor="@color/white" />
+
+        <!-- Botón para enviar rutina -->
+        <Button
+            android:id="@+id/enviarRutinaButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Enviar Rutina"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Lista para mostrar los ejercicios asociados a la rutina -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejercicios Asociados"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listaEjercicios"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- Botón para guardar cambios -->
+    <Button
+        android:id="@+id/guardarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Añadir ejercicio"
+        android:textColor="@color/white" />
+
+    <!-- Botón para eliminar rutina -->
+    <Button
+        android:id="@+id/eliminarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/metallic_red"
+        android:text="Eliminar Rutina"
+        android:textColor="@color/white" />
+</LinearLayout>
